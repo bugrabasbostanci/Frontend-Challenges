@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- [Live]()
+- [Live](https://nft-preview-card-0143.netlify.app/)
 
 ## My process
 
