@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-light-gray: hsl(212, 45%, 89%);
+  --clr-grayish-blue: hsl(220, 15%, 55%);
+  --clr-dark-blue: hsl(218, 44%, 22%);
+
+  /* Font Size */
+  --fs: 15px; /* paragraphs*/
+
+  /* Font Families */
+  --ff: "Outfit", sans-serif;
+
+  /* Font Weights */
+  --fw-regular: 400;
+  --fw-bold: 700;
+}
+
+html {
+  font-size: 1rem;
+}
+
+body {
+  background-color: var(--clr-light-gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: var(--ff);
+}
+
+.container {
+  max-width: 300px;
+  width: 100%;
+  background-color: var(--clr-white);
+  border-radius: 26px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.image {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+  padding: 0 0.7rem 1.5rem 0;
+}
+
+.descripton__title {
+  color: var(--clr-dark-blue);
+  font-size: 20px;
+}
+
+.description__text {
+  font-size: var(--fs);
+  color: var(--clr-grayish-blue);
+}
