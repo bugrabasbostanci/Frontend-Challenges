@@ -13,7 +13,6 @@ This is a solution to the [NFT preview card component challenge on Frontend Ment
   - [What I learned](#what-i-learned)
 - [Author](#author)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -43,7 +42,7 @@ Users should be able to:
 
 ### What I learned
 
-In this project, I learned how to overlay icon on an image.
+In this project, I learned how to implement overlay icon on an image.
 
 ## Author
 
