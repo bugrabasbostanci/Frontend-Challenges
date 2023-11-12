@@ -1,0 +1,235 @@
+:root {
+  /* Primary, Secondary colors */
+  --clr-primary-800: hsl(245, 75%, 52%);
+  --clr-primary-400: hsl(225, 100%, 94%);
+
+  /* Neutral colors */
+  --clr-neutral-700: hsl(223, 47%, 23%);
+  --clr-neutral-400: hsl(224, 23%, 55%);
+  --clr-neutral-100: hsl(225, 100%, 98%);
+
+  /*!!! Darker color(800) | Base color(400) | Light color(100) !!!*/
+
+  /* Font Families */
+  --ff-base: "Red Hat Display", sans-serif;
+
+  /* Font Sizes */
+  --fs-base: 1rem;
+
+  /* Font Weights */
+  --fw-regular: 500;
+  --fw-bold: 700;
+  --fw-bolder: 900;
+}
+
+/*
+    1. Use a more-intuitive box-sizing model.
+  */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+      2. Remove default margin
+    */
+* {
+  margin: 0;
+}
+/*
+      Typographic tweaks!
+      3. Add accessible line-height
+      4. Improve text rendering
+    */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+      5. Improve media defaults
+    */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+      6. Remove built-in form typography styles
+    */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+      7. Avoid text overflows
+    */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Open developer tools and use responsive design width:375px*/
+/* START DESGIN WITH MOBILE FIRST */
+
+/* General Styling */
+body {
+  font-family: var(--ff-base);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-base);
+  color: var(--clr-neutral-400);
+  background-color: var(--clr-primary-400);
+
+  /* for most projects */
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  margin: 0 1.5rem;
+}
+
+/* Utilities */
+.flex-group {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Button Setting */
+
+.buttons {
+  display: grid;
+  padding: 1.5rem;
+  gap: 1.5rem;
+}
+
+.button {
+  cursor: pointer;
+  text-decoration: none;
+  border: 0;
+  padding: 0.9em 1.5em;
+
+  background-color: var(--clr-primary-800);
+  color: var(--clr-neutral-100);
+  border-radius: 0.75rem;
+  font-weight: var(--fw-bold);
+
+  box-shadow: 0px 10px 25px 0px hsla(245, 83%, 75%, 0.7);
+}
+
+/* with :is group coding */
+.button:is(:hover, :focus) {
+  background-color: hsl(245, 83%, 68%);
+}
+
+.cancel {
+  text-align: center;
+  text-decoration: none;
+  color: var(--clr-neutral-400);
+  font-weight: var(--fw-bolder);
+}
+
+.cancel:hover {
+  color: var(--clr-neutral-700);
+}
+
+/* Localy scoped custom properties */
+.card {
+  --content-padding: 2rem;
+  --content-spacing: 2.5rem;
+
+  background-color: var(--clr-neutral-100);
+  border-radius: 1rem;
+  overflow: hidden;
+
+  display: grid;
+  max-width: 450px;
+}
+
+.card__content {
+  gap: var(--content-spacing);
+  padding: var(--content-padding);
+
+  display: grid;
+}
+
+.card__header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 1rem;
+}
+
+.card__title {
+  color: var(--clr-neutral-700);
+  font-weight: var(--fw-bolder);
+}
+
+.card__text {
+  font-size: var(--fs-base);
+}
+
+.card__plan {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card__plan .left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.plan__name {
+  color: var(--clr-neutral-700);
+  font-weight: var(--fw-bolder);
+  font-size: 0.95rem;
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.plan__name span {
+  color: var(--clr-neutral-400);
+  font-weight: var(--fw-regular);
+}
+
+.plan__link {
+  color: var(--clr-primary-800);
+  font-weight: var(--fw-bold);
+  font-size: 0.9rem;
+}
+
+.plan__link:hover {
+  text-decoration: none;
+  color: hsl(245, 83%, 68%);
+}
+
+@media (min-width: 600px) {
+  .card__content {
+    gap: var(--content-spacing);
+    padding: 1.5rem 3rem;
+  }
+
+  .card__title {
+    font-size: 2rem;
+  }
+
+  .card__plan {
+    padding: 0 1.5rem;
+  }
+
+  .buttons {
+    padding: 2rem 3rem;
+  }
+}
