@@ -108,7 +108,7 @@ body {
 
 .buttons {
   display: grid;
-  padding: 1.5rem;
+  padding: 0 1.5rem 1.5rem 1.5rem;
   gap: 1.5rem;
 }
 
@@ -145,9 +145,9 @@ body {
 /* Localy scoped custom properties */
 .card {
   --content-padding: 2rem;
-  --content-spacing: 2.5rem;
+  --content-spacing: 2rem;
 
-  background-color: var(--clr-neutral-100);
+  background-color: white;
   border-radius: 1rem;
   overflow: hidden;
 
@@ -182,6 +182,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: var(--clr-neutral-100);
+  padding: 1rem;
+  border-radius: 5px;
 }
 
 .card__plan .left {
@@ -221,12 +224,8 @@ body {
     padding: 1.5rem 3rem;
   }
 
-  .card__title {
-    font-size: 2rem;
-  }
-
   .card__plan {
-    padding: 0 1.5rem;
+    padding: 1rem 1.5rem;
   }
 
   .buttons {
