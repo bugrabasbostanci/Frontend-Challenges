@@ -1,0 +1,169 @@
+:root {
+  /* Primary, Secondary colors */
+  --clr-primary-600: hsl(229, 23%, 23%);
+  --clr-primary-400: hsl(185, 75%, 39%);
+  --clr-secondary-400: hsl(227, 10%, 46%);
+
+  /* Neutral colors */
+  --clr-neutral-400: hsl(0, 0%, 59%);
+
+  /*!!! Darker color(800) | Base color(400) | Light color(100) !!!*/
+
+  /* Font Families */
+  --ff-base: "Kumbh Sans", sans-serif;
+
+  /* Font Sizes */
+  --fs-base: 1.25rem; /* 18px name-stats */
+
+  /* Font Weights */
+  --fw-regular: 400;
+  --fw-bold: 700;
+}
+
+/*
+    1. Use a more-intuitive box-sizing model.
+  */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+      2. Remove default margin
+    */
+* {
+  margin: 0;
+}
+/*
+      Typographic tweaks!
+      3. Add accessible line-height
+      4. Improve text rendering
+    */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+      5. Improve media defaults
+    */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+      6. Remove built-in form typography styles
+    */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+      7. Avoid text overflows
+    */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Open developer tools and use responsive design width:375px*/
+/* START DESGIN WITH MOBILE FIRST */
+
+/* General Styling */
+body {
+  font-family: var(--ff-base);
+  font-weight: var(--fw-regular);
+  color: var(--clr-primary-600);
+  background-color: var(--clr-primary-400);
+
+  /* for most projects */
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+}
+
+/* Utilities */
+
+.info-group {
+  text-align: center;
+}
+
+.stat-group {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding-bottom: 1.5rem;
+}
+
+.line {
+  background-color: hsla(0, 0%, 79%, 0.9);
+  height: 1px;
+  width: 100%;
+}
+
+/* Card styles */
+.card {
+  min-width: 330px;
+  background-color: white;
+
+  border-radius: 1rem;
+  overflow: hidden;
+
+  display: grid;
+  justify-items: center;
+}
+
+.card__image {
+  border-radius: 50%;
+  border: 5px solid white;
+  margin-top: -75px;
+}
+
+.card__content {
+  display: grid;
+  justify-items: center;
+  gap: 1.5rem;
+}
+
+.card__name {
+  color: var(--clr-primary-600);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-base);
+  display: inline-flex;
+  gap: 0.5rem;
+}
+
+.card__name span {
+  font-weight: var(--fw-regular);
+}
+
+.card__city {
+  font-size: 0.875rem;
+  color: var(--clr-secondary-400);
+}
+
+.card__stats {
+  color: var(--clr-primary-600);
+  font-weight: var(--fw-bold);
+  font-size: 1.125rem;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card__stats span {
+  font-weight: var(--fw-regular);
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+}
