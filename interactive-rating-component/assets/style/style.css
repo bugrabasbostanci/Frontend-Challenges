@@ -1,0 +1,229 @@
+:root {
+  /* Primary, Secondary colors */
+  --clr-primary-400: hsl(25, 97%, 53%);
+  --clr-primary-300: hsla(25, 97%, 63%, 1);
+
+  /* Neutral colors */
+  --clr-neutral-800: hsl(216, 12%, 8%);
+  --clr-neutral-500: hsla(213, 20%, 17%, 1);
+  --clr-neutral-400: hsla(216, 12%, 54%, 0.15);
+  --clr-neutral-300: hsl(217, 12%, 63%);
+  --clr-neutral-100: hsl(0, 0%, 100%);
+
+  --clr-test-b: hsl(215, 27%, 12%);
+
+  /* Font Families */
+  --ff-base: "Overpass", sans-serif;
+
+  /* Font Sizes */
+  --fs-base: 15px;
+
+  /* Font Weights */
+  --fw-regular: 400;
+  --fw-bold: 700;
+}
+
+/*
+    1. Use a more-intuitive box-sizing model.
+  */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+      2. Remove default margin
+    */
+* {
+  margin: 0;
+}
+/*
+      Typographic tweaks!
+      3. Add accessible line-height
+      4. Improve text rendering
+    */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+      5. Improve media defaults
+    */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+      6. Remove built-in form typography styles
+    */
+input,
+button,
+textarea,
+select {
+  font: bold;
+}
+/*
+      7. Avoid text overflows
+    */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Open developer tools and use responsive design width:375px*/
+
+/* START DESGIN WITH MOBILE FIRST */
+
+/* General Styling */
+body {
+  font-family: var(--ff-base);
+  font-weight: var(--fw-regular);
+  font-size: 1rem;
+  color: var(--clr-primary-400);
+  background-color: var(--clr-neutral-800);
+
+  /* for most projects */
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  margin: 1rem;
+}
+
+/* Utilities */
+.flex-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+/* used localy scoped custom properties */
+.card {
+  --content-padding: 1rem;
+  --content-spacing: 1rem;
+  background-color: var(--clr-neutral-500);
+  border-radius: 1rem;
+
+  padding: 2rem 1.5rem;
+  display: grid;
+  gap: var(--content-spacing);
+
+  background-image: linear-gradient(
+    to bottom,
+    var(--clr-neutral-500),
+    var(--clr-test-b)
+  );
+  max-width: 375px;
+}
+
+.card .card__icon {
+  background-color: var(--clr-neutral-400);
+  border-radius: 50%;
+  padding: 0.75rem;
+}
+
+.card__content {
+  color: var(--clr-neutral-100);
+  font-size: 1.35rem;
+  font-weight: var(--fw-regular);
+}
+
+.card__text {
+  color: var(--clr-neutral-300);
+  font-size: var(--fs-base);
+}
+
+/* Rate Button Setting */
+.card__rate-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.rate__button {
+  cursor: pointer;
+  text-decoration: none;
+  border: 0;
+  background-color: var(--clr-neutral-400);
+  color: var(--clr-neutral-300);
+  font-weight: var(--fw-bold);
+  font-size: 1rem;
+  border-radius: 50%;
+  min-width: 45px;
+  font-family: var(--ff-base);
+  min-height: 45px;
+}
+
+.rate__button:is(:hover, :active, :focus) {
+  color: var(--clr-neutral-100);
+}
+
+.rate__button:hover {
+  background-color: var(--clr-primary-400);
+}
+
+.rate__button:focus {
+  background-color: var(--clr-neutral-300);
+}
+
+/* Submit Button Setting */
+.submit-button {
+  cursor: pointer;
+  text-decoration: none;
+  border: 0;
+  padding: 1rem 0;
+  font-family: var(--ff-base);
+  border-radius: 2rem;
+  background-color: var(--clr-primary-400);
+  color: var(--clr-neutral-100);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: var(--fw-bold);
+}
+
+.submit-button:is(:hover, :focus) {
+  background-color: var(--clr-neutral-100);
+  color: var(--clr-primary-400);
+}
+
+/* SUBMITTED CARD */
+.card.submitted {
+  padding: 2rem 1.5rem;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  gap: 1.5rem;
+
+  background-image: linear-gradient(
+    to bottom,
+    var(--clr-neutral-500),
+    var(--clr-test-b)
+  );
+}
+
+.submitted-card__message {
+  background-color: var(--clr-neutral-400);
+  border-radius: 2rem;
+  padding: 0.25em 0.75em;
+  color: var(--clr-primary-300);
+}
+
+.submitted-card__content {
+  color: var(--clr-neutral-100);
+  font-size: 2rem;
+}
+
+.submitted-card__text {
+  color: var(--clr-neutral-300);
+  font-size: var(--fs-base);
+}
