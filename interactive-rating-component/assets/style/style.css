@@ -191,7 +191,7 @@ body {
   font-weight: var(--fw-bold);
 }
 
-.submit-button:is(:hover, :focus) {
+.submit-button:is(:hover, :active) {
   background-color: var(--clr-neutral-100);
   color: var(--clr-primary-400);
 }
