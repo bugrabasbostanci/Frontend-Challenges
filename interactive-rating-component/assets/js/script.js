@@ -13,7 +13,7 @@ cardRateBtns.addEventListener("click", function (e) {
 submitBtn.addEventListener("click", function () {
   const html = `
     <img
-      src="/interactive-rating-component/assets/images/illustration-thank-you.svg"
+      src="./assets/images/illustration-thank-you.svg"
       alt="thank you image"
       class="submitted-card__image"/>
   
