@@ -46,7 +46,7 @@ Users should be able to:
 
 ### What I learned
 
-In this project, I learned how to implement overlay icon on an image.
+In this project, I learned how to do basic DOM manipulation.
 
 ## Author
 
