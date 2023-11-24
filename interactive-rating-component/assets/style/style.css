@@ -125,6 +125,12 @@ body {
   max-width: 375px;
 }
 
+@media (min-width: 600px) {
+  .card {
+    border-radius: 2rem;
+  }
+}
+
 .card .card__icon {
   background-color: var(--clr-neutral-400);
   border-radius: 50%;
@@ -197,7 +203,7 @@ body {
 }
 
 /* SUBMITTED CARD */
-.card.submitted {
+.submitted-card {
   padding: 2rem 1.5rem;
   display: grid;
   place-items: center;
@@ -226,4 +232,8 @@ body {
 .submitted-card__text {
   color: var(--clr-neutral-300);
   font-size: var(--fs-base);
+}
+
+.hidden {
+  display: none;
 }
