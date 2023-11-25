@@ -24,44 +24,49 @@
   </head>
   <body>
     <main>
-      <article class="card">
+      <form action="" class="form">
         <img
           src="./assets/images/icon-star.svg"
-          alt="star icon"
-          class="card__icon"
+          class="form__icon"
+          alt="form star icon"
+          title="star"
+          role="img"
         />
-        <section class="card__content flex-group">
-          <h1 class="card__title">How did we do?</h1>
-          <p class="card__text">
-            Please let us know how we did with your support request. All
-            feedback is appreciated to help us improve our offering!
-          </p>
-        </section>
-        <section class="card__rate-buttons">
-          <button class="rate__button">1</button
-          ><button class="rate__button">2</button
-          ><button class="rate__button">3</button
-          ><button class="rate__button">4</button
-          ><button class="rate__button">5</button>
-        </section>
-        <button class="submit-button">Submit</button>
-      </article>
+        <fieldset class="form__content">
+          <header class="flex-group">
+            <legend class="form__title">How did we do?</legend>
+            <p class="form__text">
+              Please let us know how we did with your support request. All
+              feedback is appreciated to help us improve our offering!
+            </p>
+          </header>
+          <div class="ratings">
+            <input type="radio" name="rating" value="1" class="rating" />
+            <input type="radio" name="rating" value="2" class="rating" />
+            <input type="radio" name="rating" value="3" class="rating" />
+            <input type="radio" name="rating" value="4" class="rating" />
+            <input type="radio" name="rating" value="5" class="rating" />
+          </div>
+        </fieldset>
+        <button type="submit" class="submit-button">Submit</button>
+      </form>
 
-      <article class="card submitted-card hidden">
+      <!-- <article class="state">
         <img
           src="./assets/images/illustration-thank-you.svg"
-          alt="submitted card image"
-          class="submitted-card__image"
+          class="state__image"
+          alt="state thank you image"
+          role="img"
         />
-        <div class="submitted-card__message"></div>
-        <section class="submitted-card__content">
-          <h1 class="submitted-card__title">Thank you!</h1>
-          <p class="submitted-card__text">
+        <p class="state__message">You selected 4 out of 5</p>
+        <section class="state__description flex-group">
+          <h1 class="state__title">Thank you!</h1>
+          <p class="state__text">
             We appreciate you taking the time to give a rating. If you ever need
             more support, don’t hesitate to get in touch!
           </p>
         </section>
-      </article>
+      </article> -->
     </main>
   </body>
 </html>
